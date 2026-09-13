@@ -1,4 +1,8 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
+// Backend now lives in frontend/api/ as Vercel Functions on the same domain,
+// so relative paths ("/api/...") work in production out of the box.
+// VITE_API_URL is only useful if you point the frontend at a different host
+// (e.g. the separate Express server in /backend) during local development.
+const API_URL = import.meta.env.VITE_API_URL || "";
 
 async function request(path, options = {}) {
   const res = await fetch(`${API_URL}${path}`, {
