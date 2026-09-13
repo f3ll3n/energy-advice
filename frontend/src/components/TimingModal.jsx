@@ -14,11 +14,11 @@ export default function TimingModal({ drinks, onClose, onSubmitted }) {
     setStatus("sending");
     setError("");
     try {
-      // await submitAdvice({
-      //   drinks: drinks.map((d) => ({ id: d.id, name: d.name })),
-      //   timing,
-      //   note: note.trim(),
-      // });
+      await submitAdvice({
+        drinks: drinks.map((d) => ({ id: d.id, name: d.name })),
+        timing,
+        note: note.trim(),
+      });
       onSubmitted();
     } catch (err) {
       setStatus("error");
