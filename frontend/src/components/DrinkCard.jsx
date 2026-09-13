@@ -78,7 +78,13 @@ export default function DrinkCard({ drink, index, checked, onToggle }) {
         <img
           src={drink.image}
           alt={drink.name}
-          style={{ height: "88%", filter: "drop-shadow(0 10px 18px rgba(0,0,0,0.4))" }}
+          style={{
+            width: "92%",
+            height: "92%",
+            objectFit: "contain",
+            borderRadius: 10,
+            filter: "drop-shadow(0 10px 18px rgba(0,0,0,0.4))",
+          }}
         />
       </div>
 
